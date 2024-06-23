@@ -132,3 +132,27 @@ body{
     }
 
 }
+
+@media only screen and (max-width: 600px){
+
+    .burger{
+        right: 34px;
+    }
+
+    .navbar{
+        margin: 0 35px;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+
+    .burger{
+        right: 15px;
+    }
+
+    .navbar{
+        margin: 0 15px;
+    }
+
+}
