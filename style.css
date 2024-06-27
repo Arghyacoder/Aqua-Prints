@@ -11,7 +11,7 @@ body{
     font-weight: 500;
 }
 
-/* svg css code  */
+/* ---------------------------------------svg css code---------------------------------------  */
 .cls-1 {
     stroke-dasharray: 0 0 10.3 10.3;
 }
@@ -30,7 +30,7 @@ body{
 .cls-3 {
     stroke-dasharray: 0 0 11.7 11.7;
 }
-/* svg css code  */
+/* ---------------------------------------svg css code---------------------------------------  */
 
 .navlinks{
     text-decoration: none;
@@ -187,6 +187,20 @@ body{
 
 .footer{
     background-color: black;
+}
+
+.loginDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 730px){
