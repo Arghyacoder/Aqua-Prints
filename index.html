@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Aqua Prints</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Images/Logo Symbol.svg" type="image/x-icon">
+    <title>Aquaprints</title>
 </head>
 
 <body>
@@ -25,7 +25,35 @@
                     </div>
                     <div class="loginBoxContent">
                         <div class="loginDisplay">
-                            <p>&nbsp;</p>
+                            <div class="lgsidp">
+                                <p class="loginpara">Join Aquaprints</p>
+                            </div>
+                            <div class="loginButtons">
+                                <div class="googleLoginButton">
+                                    <a href="#" class="googleLoginLinkButton">
+                                        <div class="googleBox">
+                                            Sign up with Google
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="facebookLoginButton">
+                                    <a href="#" class="facebookLoginLinkButton">
+                                        <div class="facebookBox">
+                                            Sign up with Facebook
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="emailLoginButton">
+                                    <a href="#" class="emailLoginLinkButton">
+                                        <div class="emailBox">
+                                            Sign up with Email
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,8 +63,8 @@
             <div class="navbar">
                 <div class="logoImage">
                     <!-- style="height: 35px;" -->
-                    <svg style="height: 35px;" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1"
-                        viewBox="0 0 351.8 64.5">
+                    <svg style="height: 35px;" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                        version="1.1" viewBox="0 0 351.8 64.5">
                         <g>
                             <path class="cls-4"
                                 d="M24.3,46.4l14.8-36.8h3.7l14.8,36.8h-4l-4.5-11.3h-16.6l-4.5,11.3h-3.8ZM33.9,31.9h14l-5.1-12.9-1.9-5.7-1.9,5.7-5.1,12.9Z" />
@@ -107,9 +135,9 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <!-- footer here  -->
-     <div class="footer">
-        
-     </div>
+    <div class="footer">
+
+    </div>
 
     <!-- JavaScript for loginBox and closeButton -->
     <script>
@@ -159,6 +187,48 @@
                 }
             });
         }
+    </script>
+    <script id="Detection of browser accent code">
+        function updateFavicon(darkMode) {
+            var favicon = document.getElementById('favicon');
+            if (darkMode) {
+                favicon.href = '#';
+            } else {
+                favicon.href = '#';
+            }
+        }
+
+        function detectDarkMode() {
+            var darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            updateFavicon(darkMode);
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                updateFavicon(event.matches);
+            });
+        }
+
+        window.onload = detectDarkMode;
+    </script>
+    <script id="Detection of browser accent code">
+        function updateFavicon(darkMode) {
+            var favicon = document.getElementById('favicon');
+            if (darkMode) {
+                favicon.href = 'dark-favicon.ico';
+            } else {
+                favicon.href = 'light-favicon.ico';
+            }
+        }
+
+        function detectDarkMode() {
+            var darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            updateFavicon(darkMode);
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                updateFavicon(event.matches);
+            });
+        }
+
+        window.onload = detectDarkMode;
     </script>
 </body>
 
