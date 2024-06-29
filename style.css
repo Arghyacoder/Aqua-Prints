@@ -182,11 +182,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 582px;
+    height: 790px;
 }
 
 .footer{
     background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .loginDisplay{
@@ -194,6 +197,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .loginButtons{
@@ -201,6 +206,104 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 35px;
+}
+
+.lgsidp{
+    margin: 10px;
+}
+
+.linkbut{
+    margin: 7px;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    width: 300px;
+    line-height: 35px;
+}
+
+.onclickEvent:active{
+    border-color: green;
+    color: green;
+}
+
+.googleBox{
+    display: flex;
+    margin: 1px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.facebookBox{
+    display: flex;
+    margin: 1px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emailBox{
+    display: flex;
+    margin: 1px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.svgGoogle{
+    display: flex;
+    margin: 0px 0px 0px 7px;
+}
+
+.svgFacebook{
+    display: flex;
+    margin: 0px 0px 0px 7px;
+}
+
+.svgEmail{
+    display: flex;
+    margin: 0px 0px 0px 7px;
+}
+
+.googleLoginLinkButton{
+    text-decoration: none;
+    color: black;
+}
+
+.facebookLoginLinkButton{
+    text-decoration: none;
+    color: black;
+}
+
+.emailLoginLinkButton{
+    text-decoration: none;
+    color: black;
+}
+
+.emptySpace{
+    width: 15px;
+}
+
+.signinPara{
+    margin: 15px
+}
+
+@media only screen and (max-width: 950px){
+
+    .loginBox{
+        width: 70vh;
+        margin-top: 0px;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 727px){
+
+    .loginBox{
+        width: 100%;
+    }
+
+
 }
 
 @media only screen and (max-width: 730px){
@@ -316,6 +419,14 @@ body{
 
     .navbar{
         margin: 0 15px;
+    }
+
+}
+
+@media only screen and (max-width: 370px){
+
+    .linkbut{
+        width: 100%;
     }
 
 }
