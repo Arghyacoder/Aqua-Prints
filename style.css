@@ -320,7 +320,7 @@ body{
 }
 
 .submitButton{
-    background-color: #0098ff;
+    background-color: black;
     color: white;
     width: 100px;
     font-size: 15px;
@@ -358,8 +358,8 @@ body{
 }
 
 .arrow-left-shaft {
-    width: 20px;
-    height: 2px;
+    width: 10px;
+    height: 10px;
     background-color: black;
 }
 
@@ -384,6 +384,25 @@ body{
 .password-container .toggle-password svg {
     width: 20px;
     height: 20px;
+}
+
+.signbut{
+    cursor: pointer;
+}
+
+.refSignInBut{
+    cursor: pointer;
+}
+
+.signInBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupHide{
+    display: none;
 }
 
 .trademark{
@@ -533,6 +552,32 @@ body{
 
     .linkbut{
         width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 340px){
+    
+    .inputSignUp{
+        width:250px;
+    }
+
+    .password-container input[type="password"],.password-container input[type="text"] {
+        padding-right: 30px;
+        width: 230px;
+    }
+
+}
+
+@media only screen and (max-width: 275px){
+
+    .inputSignUp{
+        width:180px;
+    }
+
+    .password-container input[type="password"],.password-container input[type="text"] {
+        padding-right: 30px;
+        width: 160px;
     }
 
 }
