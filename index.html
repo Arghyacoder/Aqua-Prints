@@ -17,7 +17,7 @@
     <div class="content">
         <div id="invisibleContent" class="invisibleContent hide">
             <div class="loginBox">
-                <div class="loginBoxItems">
+                <div class="loginBoxItems" id="boxIdRefresh">
                     <div class="close">
                         <div id="closeButton" class="closeButton">
                             <div class="closelineleft"></div>
@@ -341,10 +341,22 @@
     </script>
 
     <script>
+        document.getElementById("closeButton").addEventListener("click", function () {
+            document.querySelector('.signUpWithEmail').classList.add("hideBox");
+            document.querySelector('.loginDisplay').classList.remove("hideBox");
+            var arrowContainer = document.querySelector(".arrow-container");
+            if (arrowContainer.style.display === "flex" || arrowContainer.style.display === "") {
+                arrowContainer.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
         // JavaScript to show the invisibleContent div when the SignIN button is clicked
         document.getElementById("signbut").addEventListener("click", function () {
             document.getElementById("invisibleContent").classList.remove("hide");
             document.getElementById("loginDisplay").classList.add("signupHide");
+            document.querySelector('.signUpWithEmail').classList.remove("signupHide");
         });
 
         // JavaScript to hide the invisibleContent div when the Close button is clicked
