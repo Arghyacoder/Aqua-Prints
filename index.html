@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- <link rel="shortcut icon" href="Images/Logo Symbol.svg" type="image/x-icon"> -->
     <link rel="shortcut icon" id="favicon" type="image/x-icon">
     <title>Aquaprints</title>
@@ -111,8 +110,7 @@
                                     </a>
                                 </div>
                                 <div class="signinPara">
-                                    <p>Already have an account? <a href=""
-                                            style="text-decoration: none; color: green;"><b>Sign in</b></a></p>
+                                    <p class="refSignInBut">Already have an account? <b style="text-decoration: none; color: green;">Sign in</b></p>
                                 </div>
                             </div>
                         </div>
@@ -126,14 +124,18 @@
                                 <div class="inputForm">
                                     <form action="index.html" method="post" class="formInput">
                                         <div class="inputEmail">
-                                            <input type="email" name="email" id="email" class="inputSignUp" placeholder="Email">
+                                            <input type="email" name="email" id="email" class="inputSignUp"
+                                                placeholder="Email">
                                         </div>
                                         <div class="inputPass">
                                             <!-- <input type="password" name="password" id="password" class="inputSignUp" placeholder="Set a password"> -->
                                             <div class="password-container">
-                                                <input type="password" name="password" id="password" class="inputSignUp" placeholder="Set a password">
+                                                <input type="password" name="password" id="password" class="inputSignUp"
+                                                    placeholder="Set a password">
                                                 <div class="toggle-password" onclick="togglePassword()">
-                                                    <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                         <circle cx="12" cy="12" r="3"></circle>
                                                     </svg>
@@ -146,9 +148,88 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="signinPara">
-                                <p>Already have an account? <a href=""
-                                        style="text-decoration: none; color: green;"><b>Sign in</b></a></p>
+                        </div>
+                        <!-- Sign in section  -->
+                        <div class="signInBox" id="signinDisplay">
+                            <div class="lgsidp">
+                                <h2 class="loginpara">Sign in</h2>
+                            </div>
+                            <div class="loginButtons">
+                                <div class="googleLoginButton linkbut onclickEvent">
+                                    <a href="#" class="googleLoginLinkButton onclickEvent">
+                                        <div class="googleBox">
+                                            <!-- svg google logo -->
+                                            <div class="svgGoogle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+                                                    viewBox="0 0 48 48">
+                                                    <path fill="#FFC107"
+                                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                                    </path>
+                                                    <path fill="#FF3D00"
+                                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                                    </path>
+                                                    <path fill="#4CAF50"
+                                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                                    </path>
+                                                    <path fill="#1976D2"
+                                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="textForSignup">
+                                                <p>Sign in with Google</p>
+                                            </div>
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="facebookLoginButton linkbut onclickEvent">
+                                    <a href="#" class="facebookLoginLinkButton onclickEvent">
+                                        <div class="facebookBox">
+                                            <!-- svg facebook logo -->
+                                            <div class="svgFacebook">
+                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+                                                    viewBox="0 0 48 48">
+                                                    <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1"
+                                                        x1="9.993" x2="40.615" y1="9.993" y2="40.615"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop offset="0" stop-color="#2aa4f4"></stop>
+                                                        <stop offset="1" stop-color="#007ad9"></stop>
+                                                    </linearGradient>
+                                                    <path fill="#0983df"
+                                                        d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z">
+                                                    </path>
+                                                    <path fill="#fff"
+                                                        d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="textForSignup">
+                                                <p>Sign up with Facebook</p>
+                                            </div>
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="emailLoginButton linkbut onclickEvent" id="signINWITHEMAIL">
+                                    <a href="#" class="emailLoginLinkButton onclickEvent">
+                                        <div class="emailBox">
+                                            <!-- svg email logo -->
+                                            <div class="svgEmail">
+                                                <svg width="25" viewBox="0 0 24 24" fill="none" class="bt">
+                                                    <g stroke="#242424">
+                                                        <rect x="3.5" y="5.5" width="17" height="13" rx="1"></rect>
+                                                        <path d="M3.5 8l8.5 6 8.5-6" stroke-linecap="round"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div class="textForSignup">
+                                                <p>Sign in with Email</p>
+                                            </div>
+                                            <div class="emptySpace"></div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,7 +291,7 @@
                         <a href="" class="navlinks">About</a>
                     </div>
                     <div class="navlinkslist">
-                        <a href="" class="navlinks">Sign in</a>
+                        <p class="navlinks signbut" id="signbut">Sign in</p>
                     </div>
                     <div class="registrationButton">
                         <p class="navlinks regbut" id="regbutton">Sign up</p>
@@ -242,11 +323,34 @@
         // JavaScript to show the invisibleContent div when the Register button is clicked
         document.getElementById("regbutton").addEventListener("click", function () {
             document.getElementById("invisibleContent").classList.remove("hide");
+            document.getElementById("signinDisplay").classList.add("signupHide");
         });
 
         // JavaScript to hide the invisibleContent div when the Close button is clicked
         document.getElementById("closeButton").addEventListener("click", function () {
             document.getElementById("invisibleContent").classList.add("hide");
+            document.getElementById("signinDisplay").classList.remove("signupHide");
+        });
+    </script>
+
+    <script>
+        document.querySelector('.refSignInBut').addEventListener("click", function (){
+            document.getElementById("loginDisplay").classList.add("signupHide");
+            document.getElementById("signinDisplay").classList.remove("signupHide");
+        })
+    </script>
+
+    <script>
+        // JavaScript to show the invisibleContent div when the SignIN button is clicked
+        document.getElementById("signbut").addEventListener("click", function () {
+            document.getElementById("invisibleContent").classList.remove("hide");
+            document.getElementById("loginDisplay").classList.add("signupHide");
+        });
+
+        // JavaScript to hide the invisibleContent div when the Close button is clicked
+        document.getElementById("closeButton").addEventListener("click", function () {
+            document.getElementById("invisibleContent").classList.add("hide");
+            document.getElementById("loginDisplay").classList.remove("signupHide");
         });
     </script>
 
@@ -276,7 +380,7 @@
             var arrowContainer = document.querySelector(".arrow-container");
             if (arrowContainer.style.display === "flex" || arrowContainer.style.display === "") {
                 arrowContainer.style.display = "none";
-            } 
+            }
         });
     </script>
 
@@ -319,12 +423,16 @@
 
     <!-- disable scroll event when signup/signin menu is active -->
     <script>
-        document.getElementById("regbutton").addEventListener("click", function() {
+        document.getElementById("regbutton").addEventListener("click", function () {
             document.body.style.overflow = "hidden"; // Stop scrolling
         });
-    
-        document.querySelectorAll(".close").forEach(function(closeButton) {
-            closeButton.addEventListener("click", function() {
+
+        document.getElementById("signbut").addEventListener("click", function () {
+            document.body.style.overflow = "hidden"; // Stop scrolling
+        });
+
+        document.querySelectorAll(".close").forEach(function (closeButton) {
+            closeButton.addEventListener("click", function () {
                 document.body.style.overflow = ""; // Allow scrolling
             });
         });
@@ -373,7 +481,7 @@
             }
         }
     </script>
-    
+
     <script id="Detection of browser accent code">
         function updateFavicon(darkMode) {
             var favicon = document.getElementById('favicon');
