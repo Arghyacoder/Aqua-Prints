@@ -294,8 +294,8 @@ body{
     border-width: 1px;
     border-radius: 30px;
     line-height: 35px;
-    padding-left: 10px;
-    width: 290px;
+    padding: 0px 10px;
+    width: 300px;
     color: black;
     font-size: 15px;
     font-weight: 600;
@@ -361,6 +361,29 @@ body{
     width: 20px;
     height: 2px;
     background-color: black;
+}
+
+.password-container {
+    position: relative;
+    display: inline-block;
+}
+
+.password-container input[type="password"],.password-container input[type="text"] {
+    padding-right: 30px;
+    width: 280px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-container .toggle-password svg {
+    width: 20px;
+    height: 20px;
 }
 
 .trademark{
