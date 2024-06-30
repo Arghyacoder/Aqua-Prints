@@ -287,6 +287,82 @@ body{
     margin: 15px
 }
 
+.inputSignUp{
+    margin: 7px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    line-height: 35px;
+    padding-left: 10px;
+    width: 290px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.inputSignUp:active{
+    border-color: green;
+}
+
+.signUpWithEmail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton{
+    background-color: #0098ff;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.hideBox{
+    display:none;
+}
+
+/* .showArrow{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    padding: 10px 0px 20px 10px;
+} */
+
+.arrow-container{
+    display: none;
+}
+
+.arrow-container:hover{
+    cursor: pointer;
+}
+
+.arrow-left-head {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+}
+
+.arrow-left-shaft {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+}
+
 .trademark{
     display: flex;
     flex-direction: column;

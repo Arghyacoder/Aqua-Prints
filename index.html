@@ -24,9 +24,13 @@
                             <div class="closelineleft"></div>
                             <div class="closelineright"></div>
                         </div>
+                        <div class="arrow-container" id="arrow">
+                            <div class="arrow-left-head"></div>
+                            <div class="arrow-left-shaft"></div>
+                        </div>
                     </div>
                     <div class="loginBoxContent">
-                        <div class="loginDisplay">
+                        <div class="loginDisplay" id="loginDisplay">
                             <div class="lgsidp">
                                 <h2 class="loginpara">Sign up</h2>
                             </div>
@@ -87,7 +91,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="emailLoginButton linkbut onclickEvent">
+                                <div class="emailLoginButton linkbut onclickEvent" id="signUPWITHEMAIL">
                                     <a href="#" class="emailLoginLinkButton onclickEvent">
                                         <div class="emailBox">
                                             <!-- svg email logo -->
@@ -110,6 +114,32 @@
                                     <p>Already have an account? <a href=""
                                             style="text-decoration: none; color: green;"><b>Sign in</b></a></p>
                                 </div>
+                            </div>
+                        </div>
+                        <div id="signUpWithEmail" class="hideBox signUpWithEmail">
+                            <div class="signUpPara">
+                                <div class="lgsidp">
+                                    <h2 class="loginpara">Sign up with email</h2>
+                                </div>
+                            </div>
+                            <div class="formForSignUp">
+                                <div class="inputForm">
+                                    <form action="index.html" method="post" class="formInput">
+                                        <div class="inputEmail">
+                                            <input type="email" name="email" id="email" class="inputSignUp" placeholder="Email">
+                                        </div>
+                                        <div class="inputPass">
+                                            <input type="password" name="password" id="password" class="inputSignUp" placeholder="Set a password">
+                                        </div>
+                                        <div class="submitButtonDiv">
+                                            <input type="submit" value="Sign up" class="submitButton">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="signinPara">
+                                <p>Already have an account? <a href=""
+                                        style="text-decoration: none; color: green;"><b>Sign in</b></a></p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +204,7 @@
                         <a href="" class="navlinks">Sign in</a>
                     </div>
                     <div class="registrationButton">
-                        <p class="navlinks regbut" id="regbutton">Register</p>
+                        <p class="navlinks regbut" id="regbutton">Sign up</p>
                     </div>
                 </div>
             </div>
@@ -208,6 +238,36 @@
         // JavaScript to hide the invisibleContent div when the Close button is clicked
         document.getElementById("closeButton").addEventListener("click", function () {
             document.getElementById("invisibleContent").classList.add("hide");
+        });
+    </script>
+
+    <!-- JavaScript code for signup with email box hide and show  -->
+    <script>
+        // Javascript for signup with email box 
+        document.getElementById("signUPWITHEMAIL").addEventListener("click", function () {
+            document.querySelector('.signUpWithEmail').classList.remove("hideBox");
+            document.querySelector('.loginDisplay').classList.add("hideBox");
+            var arrowContainer = document.querySelector(".arrow-container");
+            if (arrowContainer.style.display === "none" || arrowContainer.style.display === "") {
+                arrowContainer.style.display = "flex";
+                arrowContainer.style.alignItems = "center";
+                arrowContainer.style.position = "absolute";
+                arrowContainer.style.left = "0px";
+                arrowContainer.style.padding = "10px 0px 20px 10px";
+            } else {
+                arrowContainer.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        document.querySelector('.arrow-container').addEventListener("click", function () {
+            document.querySelector('.signUpWithEmail').classList.add("hideBox");
+            document.querySelector('.loginDisplay').classList.remove("hideBox");
+            var arrowContainer = document.querySelector(".arrow-container");
+            if (arrowContainer.style.display === "flex" || arrowContainer.style.display === "") {
+                arrowContainer.style.display = "none";
+            } 
         });
     </script>
 
@@ -247,6 +307,20 @@
             });
         }
     </script>
+
+    <!-- disable scroll event when signup/signin menu is active -->
+    <script>
+        document.getElementById("regbutton").addEventListener("click", function() {
+            document.body.style.overflow = "hidden"; // Stop scrolling
+        });
+    
+        document.querySelectorAll(".close").forEach(function(closeButton) {
+            closeButton.addEventListener("click", function() {
+                document.body.style.overflow = ""; // Allow scrolling
+            });
+        });
+    </script>
+
     <script id="Detection of browser accent code">
         function updateFavicon(darkMode) {
             var favicon = document.getElementById('favicon');
