@@ -18,12 +18,12 @@ body{
 
 .cls-1, .cls-2, .cls-3 {
     fill: none;
-    stroke: #231f20;
+    stroke: black;
     stroke-miterlimit: 10;
 }
 
 .cls-4 {
-    fill: #231f20;
+    fill: black;
     stroke-width: 0px;
 }
 
@@ -79,6 +79,7 @@ body{
     width: 100%;
     transition-property: all;
     transition-duration: 0.25s;
+    background-color: #f7f4ed;
 }
 
 .bordercolor{
@@ -320,7 +321,7 @@ body{
 }
 
 .submitButton{
-    background-color: black;
+    background-color: rgb(8 102 255);
     color: white;
     width: 100px;
     font-size: 15px;
@@ -403,6 +404,63 @@ body{
 
 .signupHide{
     display: none;
+}
+
+.emailLoginSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgotPassword{
+    padding: 5px 0px 25px 0px;
+    text-decoration: none;
+}
+
+.forgotPassword a{
+    text-decoration: none;
+    color:orangered;
+}
+
+.submitButtonDiv{
+    margin: 10px;
+}
+
+.or{
+    display: flex;
+    align-items: center;
+}
+
+.or p{
+    padding: 10px;
+}
+
+.lineForOr{
+    width: 130px;
+    background-color: black;
+    height: 1px;
+}
+
+.contentHomePage{
+    margin: 100px 0px 0px 30px;
+}
+
+.firstpara{
+    font-size: 120px;
+}
+
+.secondpara{
+    font-size: 140px;
+    color: rgb(0, 115, 0);
+    display: flex;
 }
 
 .trademark{
@@ -554,6 +612,10 @@ body{
         width: 100%;
     }
 
+    .linkbutsignin{
+        width: 300px;
+    }
+
 }
 
 @media only screen and (max-width: 340px){
@@ -567,6 +629,10 @@ body{
         width: 230px;
     }
 
+    .linkbutsignin{
+        width: 273px;
+    }
+
 }
 
 @media only screen and (max-width: 275px){
@@ -578,6 +644,10 @@ body{
     .password-container input[type="password"],.password-container input[type="text"] {
         padding-right: 30px;
         width: 160px;
+    }
+
+    .linkbutsignin{
+        width: 212px;
     }
 
 }
