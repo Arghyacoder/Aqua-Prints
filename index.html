@@ -155,7 +155,40 @@
                                 <h2 class="loginpara">Sign in</h2>
                             </div>
                             <div class="loginButtons">
-                                <div class="googleLoginButton linkbut onclickEvent">
+                                <div class="emailLoginSection">
+                                    <form action="" class="LoginForm" method="post">
+                                        <div class="emailInputLogin">
+                                            <input type="email" name="email" id="emailSignin" class="inputSignUp"
+                                                placeholder="Email">
+                                        </div>
+                                        <div class="passwordInputLogin">
+                                            <div class="password-container">
+                                                <input type="password" name="password" id="passwordSignin" class="inputSignUp"
+                                                    placeholder="Password">
+                                                <div class="toggle-password" onclick="togglePassword()">
+                                                    <svg id="eyeIcon_2" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                        <circle cx="12" cy="12" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="submitButtonDiv">
+                                            <input type="submit" value="Sign in" class="submitButton">
+                                        </div>
+                                    </form>
+                                    <div class="forgotPassword">
+                                        <a href="">Forgot password?</a>
+                                    </div>
+                                </div>
+                                <div class="or">
+                                    <div class="lineForOr"></div>
+                                    <p>OR</p>
+                                    <div class="lineForOr"></div>
+                                </div>
+                                <div class="googleLoginButton linkbut onclickEvent linkbutsignin">
                                     <a href="#" class="googleLoginLinkButton onclickEvent">
                                         <div class="googleBox">
                                             <!-- svg google logo -->
@@ -183,7 +216,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="facebookLoginButton linkbut onclickEvent">
+                                <div class="facebookLoginButton linkbut onclickEvent linkbutsignin">
                                     <a href="#" class="facebookLoginLinkButton onclickEvent">
                                         <div class="facebookBox">
                                             <!-- svg facebook logo -->
@@ -205,26 +238,7 @@
                                                 </svg>
                                             </div>
                                             <div class="textForSignup">
-                                                <p>Sign up with Facebook</p>
-                                            </div>
-                                            <div class="emptySpace"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="emailLoginButton linkbut onclickEvent" id="signINWITHEMAIL">
-                                    <a href="#" class="emailLoginLinkButton onclickEvent">
-                                        <div class="emailBox">
-                                            <!-- svg email logo -->
-                                            <div class="svgEmail">
-                                                <svg width="25" viewBox="0 0 24 24" fill="none" class="bt">
-                                                    <g stroke="#242424">
-                                                        <rect x="3.5" y="5.5" width="17" height="13" rx="1"></rect>
-                                                        <path d="M3.5 8l8.5 6 8.5-6" stroke-linecap="round"></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div class="textForSignup">
-                                                <p>Sign in with Email</p>
+                                                <p>Sign in with Facebook</p>
                                             </div>
                                             <div class="emptySpace"></div>
                                         </div>
@@ -305,18 +319,38 @@
             </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
+    <div class="contentHomePage">
+        <div class="textContentHomePage">
+            <div class="firstpara">
+                <p>elevate your</p>
+            </div>
+            <div class="secondpara">
+                <p>BRAND</p>
+                <p id="dots"></p>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- footer here  -->
     <div class="footer">
         <div class="trademark">
             <p>All rights reserved Aquaprints &copy; 2024</p>
-            <h6>powered by CREATIVEPRINTS.IN</h6>
+            <h6>a tradename of CREATIVEPRINTS.IN</h6>
         </div>
     </div>
+
+    <!-- javascript for dots appearing and disappearing  -->
+    <script>
+        const brandElement = document.getElementById('dots');
+        let dotCount = 0;
+    
+        setInterval(() => {
+          dotCount = (dotCount + 1) % 4; 
+          brandElement.textContent = '.'.repeat(dotCount);
+        }, 500); // Change every 500 milliseconds
+    </script>
 
     <!-- JavaScript for loginBox and closeButton linked with register button-->
     <script>
@@ -422,7 +456,7 @@
             const button = document.getElementById("regbutton");
 
             navBars.forEach(navBar => {
-                if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
                     navBar.classList.add("bordercolor");
                     button.classList.add("buttonscrollcolor");
                 } else {
@@ -452,8 +486,8 @@
 
     <script>
         function togglePassword() {
-            const passwordField = document.getElementById('password');
-            const eyeIcon = document.getElementById('eyeIcon');
+            const passwordField = document.getElementById('passwordSignin');
+            const eyeIcon = document.getElementById('eyeIcon_2');
 
             if (passwordField.type === 'password') {
                 passwordField.type = 'text';
@@ -474,8 +508,8 @@
 
     <script>
         function togglePassword() {
-            const passwordField = document.getElementById('password');
-            const eyeIcon = document.getElementById('eyeIcon');
+            const passwordField = document.getElementById('passwordSignin');
+            const eyeIcon = document.getElementById('eyeIcon_2');
 
             if (passwordField.type === 'password') {
                 passwordField.type = 'text';
